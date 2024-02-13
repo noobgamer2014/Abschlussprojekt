@@ -1,0 +1,28 @@
+/* login.component.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Use full viewport height */
+  }
+  
+  .mat-card {
+    width: 100%;
+    max-width: 400px; /* Maximum width of the form */
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }

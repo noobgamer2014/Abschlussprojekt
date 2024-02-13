@@ -1,7 +1,18 @@
+// app-routing.module.ts
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SignUpComponent } from './signup/sign-up.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redirect empty path to '/login'
+  { path: 'login', component: LoginComponent }, // Define the 'login' route
+  { path: 'dashboard', component: DashboardComponent }, // Define the 'dashboard' route
+  { path: 'signup', component: SignUpComponent }
+
+  // ... other routes can be added here as needed
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
