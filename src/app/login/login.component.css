@@ -3,20 +3,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Use full viewport height */
+  height: 100vh;
 }
 
-.mat-card {
-  width: 100%;
-  max-width: 400px; /* Maximum width of the form */
+.header-bar {
+  background-color: #003366; /* Dark blue color; adjust as needed */
+  color: white;
+  padding: 15px;
+  text-align: left;
+}
+
+.mat-card-header {
+  padding-bottom: 20px; /* Adds space below the header bar */
+  margin-bottom: 20px; /* Additional space can be adjusted here if needed */
+  border-bottom: 1px solid #e0e0e0; /* Optional: adds a line to separate header from form */
 }
 
 .full-width {
   width: 100%;
+  margin-top: 20px; /* Add space above the first form field */
 }
 
 .button-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 16px;
+  margin-top: 20px;
 }

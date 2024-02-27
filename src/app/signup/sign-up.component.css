@@ -1,28 +1,29 @@
-/* login.component.css */
+/* sign-up.component.css */
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Use full viewport height */
-  }
-  
-  .mat-card {
-    width: 100%;
-    max-width: 400px; /* Maximum width of the form */
-  }
-  
-  .full-width {
-    width: 100%;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 16px;
-  }
-  
-  .actions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 16px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.header-bar {
+  background-color: #003366; /* Dark blue color; adjust as needed */
+  color: white;
+  padding: 15px;
+  text-align: left;
+}
+
+.mat-card-header {
+  margin-bottom: 20px; /* Add space below the header bar */
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 20px; /* Add space above the first form field if needed */
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}

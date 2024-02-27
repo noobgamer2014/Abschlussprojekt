@@ -1,32 +1,37 @@
 <!-- sign-up.component.html -->
 <div class="container">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>Sign Up</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <form class="sign-up-form" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
-          <mat-form-field appearance="fill" class="full-width">
-            <mat-label>Username</mat-label>
-            <input matInput formControlName="username">
-          </mat-form-field>
-  
-          <mat-form-field appearance="fill" class="full-width">
-            <mat-label>Email</mat-label>
-            <input matInput formControlName="email">
-          </mat-form-field>
-  
-          <mat-form-field appearance="fill" class="full-width">
-            <mat-label>Password</mat-label>
-            <input matInput type="password" formControlName="password">
-          </mat-form-field>
-  
-          <div class="actions">
-            <button mat-button (click)="redirectLogin()">Back</button>
-            <button mat-raised-button color="primary" type="submit" [disabled]="!signUpForm.valid">Sign Up</button>
-          </div>
-        </form>
-      </mat-card-content>
-    </mat-card>
-  </div>
-  
+  <mat-card>
+    <!-- Dark blue bar as a header -->
+    <div class="header-bar">
+      <mat-card-title>Sign Up</mat-card-title>
+    </div>
+
+    <mat-card-content>
+      <form class="sign-up-form" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <!-- Username field with tooltip -->
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="Choose a username" formControlName="username" matTooltip="Create your unique username">
+        </mat-form-field>
+
+        <!-- Email field with tooltip -->
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" placeholder="Your email address" formControlName="email" matTooltip="Enter your email">
+        </mat-form-field>
+
+        <!-- Password field with tooltip -->
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" placeholder="Create a password" formControlName="password" matTooltip="Create a secure password">
+        </mat-form-field>
+
+        <div class="actions">
+          <button mat-stroked-button (click)="redirectLogin()">Back</button>
+          <button mat-raised-button color="primary" type="submit" [disabled]="!signUpForm.valid">Sign Up</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+

@@ -14,7 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SignUpComponent } from './signup/sign-up.component';
-
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,8 @@ import { SignUpComponent } from './signup/sign-up.component';
     MatIconModule,
     RouterModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatTooltipModule
 
   ],
   providers: [],

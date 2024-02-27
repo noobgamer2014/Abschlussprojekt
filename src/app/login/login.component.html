@@ -1,20 +1,24 @@
 <!-- login.component.html -->
 <div class="container">
-  
+
   <mat-card>
-    <mat-card-header>
-      <mat-card-title>Login</mat-card-title>
-    </mat-card-header>
+    <!-- Dark blue bar as a header -->
+    <div class="header-bar">
+      <mat-card-title>VacationPlanner</mat-card-title>
+    </div>
+
     <mat-card-content>
       <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <!-- Username field with tooltip -->
         <mat-form-field appearance="fill" class="full-width">
           <mat-label>Username</mat-label>
-          <input matInput placeholder="Username" formControlName="username">
+          <input matInput placeholder="Username" formControlName="username" matTooltip="Please enter your username">
         </mat-form-field>
 
+        <!-- Password field with tooltip -->
         <mat-form-field appearance="fill" class="full-width">
           <mat-label>Password</mat-label>
-          <input matInput type="password" placeholder="Password" formControlName="password">
+          <input matInput type="password" placeholder="Password" formControlName="password" matTooltip="Please enter your password">
         </mat-form-field>
 
         <div class="button-container">
