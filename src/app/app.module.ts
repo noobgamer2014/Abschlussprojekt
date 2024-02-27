@@ -15,6 +15,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SignUpComponent } from './signup/sign-up.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { CalendarModule } from './calendar/calendar.module';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,11 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     RouterModule,
     HttpClientModule,
     AppRoutingModule,
-    MatTooltipModule
+    MatTooltipModule,
+    FullCalendarModule,
+    MatToolbarModule,
+    CalendarModule
+
 
   ],
   providers: [],

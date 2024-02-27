@@ -1,12 +1,25 @@
 <!-- dashboard.component.html -->
-<mat-card>
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Dashboard</mat-card-title>
-    <mat-card-subtitle>Welcome to your dashboard</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
-    <p>This is the dashboard of the application.</p>
-    <!-- Add more content here -->
-  </mat-card-content>
-</mat-card>
+<div class="dashboard">
+  <mat-toolbar color="primary">Dashboard</mat-toolbar>
+  
+  <mat-card class="user-info">
+    <mat-card-title>User Information</mat-card-title>
+    <mat-card-content>
+      <p>Vacation Days Left: 10</p>
+      <!-- Add more user info here -->
+    </mat-card-content>
+  </mat-card>
+  
+  <mat-card class="calendar-card">
+    <mat-card-title>Calendar</mat-card-title>
+    <mat-card-content>
+     <!--full-calendar [plugins]="calendarPlugins" [initialView]="calendarView"></full-calendar-->
+    </mat-card-content>
+  </mat-card>
+  
+  <!-- Action Buttons -->
+  <div class="actions">
+    <button mat-raised-button color="primary">Request Vacation</button>
+    <button mat-raised-button color="accent">View Requests</button>
+  </div>
+</div>
