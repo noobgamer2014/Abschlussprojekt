@@ -1,9 +1,8 @@
-// sign-up.component.ts
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthenticationService } from '../authentication.service'; // Adjust the path as necessary
-
+import { AuthenticationService } from '../services/authentication.service'; // Adjust the path as necessary
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-sign-up',
@@ -25,29 +24,29 @@ export class SignUpComponent implements OnInit {
     });
   }
 
-  redirectLogin(){
-    this.router.navigate(['/login'])
-  }
-
   ngOnInit(): void {
   }
 
   onSubmit(): void {
-    if (this.signUpForm.invalid) {
-      return;
+    if (this.signUpForm.valid) {
+      // Assuming a register method exists in the authentication service
+      this.authService.register(
+        this.signUpForm.value.username,
+        this.signUpForm.value.email,
+        this.signUpForm.value.password
+      ).subscribe(
+        response => {
+          // Redirect to the login page upon successful registration
+          this.router.navigate(['/login']);
+        },
+        error => {
+          // Handle errors here (e.g., display an error message)
+        }
+      );
     }
-    
-    ////const bcrypt = require('bcrypt');
-    //const saltRounds = 10;
-    //bcrypt.hash(password,saltRounds)
-    ////next: () => {
-        // Handle response here, e.g., navigate to the login page or dashboard
-       // this.router.navigate(['/login']);
-      //},
-      //error: error => {
-       // console.error(error);
-        // Optionally handle registration error, e.g., show an error message
-      }
-    }//);
- // }
-//}
+  }
+
+  redirectLogin() {
+    this.router.navigate(['/login']);
+  }
+}

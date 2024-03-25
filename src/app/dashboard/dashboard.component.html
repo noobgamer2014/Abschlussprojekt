@@ -1,25 +1,41 @@
-<!-- dashboard.component.html -->
-<div class="dashboard">
-  <mat-toolbar color="primary">Dashboard</mat-toolbar>
-  
-  <mat-card class="user-info">
-    <mat-card-title>User Information</mat-card-title>
-    <mat-card-content>
-      <p>Vacation Days Left: 10</p>
-      <!-- Add more user info here -->
-    </mat-card-content>
-  </mat-card>
-  
-  <mat-card class="calendar-card">
-    <mat-card-title>Calendar</mat-card-title>
-    <mat-card-content>
-     <!--full-calendar [plugins]="calendarPlugins" [initialView]="calendarView"></full-calendar-->
-    </mat-card-content>
-  </mat-card>
-  
-  <!-- Action Buttons -->
-  <div class="actions">
-    <button mat-raised-button color="primary">Request Vacation</button>
-    <button mat-raised-button color="accent">View Requests</button>
+<div class="dashboard-container">
+  <div class="header">
+    <span class="dashboard-title">Dashboard</span>
+    <span class="vacation-days">Leftover Vacation Days: {{ leftoverDays }}</span>
+    <span class="logout" (click)="logout()">Logout</span>
+  </div>
+
+  <div class="content">
+    <!-- Sidebar for Feed -->
+    <div class="sidebar">
+      <!-- List of Recent Vacation Requests -->
+      <mat-card class="recent-requests-card">
+        <mat-card-title>Feed</mat-card-title>
+        <mat-card-content>
+          <ul *ngIf="recentVacations.length > 0; else noRecentVacations">
+            <li *ngFor="let vacation of recentVacations">
+              <p>{{ vacation.description }} - From {{ vacation.startDate | date }} to {{ vacation.endDate | date }}</p>
+            </li>
+          </ul>
+          <ng-template #noRecentVacations>
+            <p>No recent vacation requests found.</p>
+          </ng-template>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <!-- Main Area for Calendar and Buttons -->
+    <div class="main">
+      <div class="action-buttons">
+        <button mat-raised-button color="primary" (click)="openVacationRequestForm()">Request Vacation</button>
+        <button mat-raised-button color="accent" (click)="navigateToViewRequests()">View Requests</button>
+      </div>
+      <mat-card class="calendar-card">
+        <mat-card-title>Calendar</mat-card-title>
+        <mat-card-content>
+          <full-calendar [options]="calendarOptions"></full-calendar>
+        </mat-card-content>
+      </mat-card>
+    </div>
   </div>
 </div>

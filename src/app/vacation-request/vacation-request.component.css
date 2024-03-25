@@ -1,0 +1,22 @@
+.vacation-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white; /* Dark blue background */
+  color: Black; /* White text */
+  padding: 20px;
+}
+
+h2 {
+  color: black; /* Brand color for titles */
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}

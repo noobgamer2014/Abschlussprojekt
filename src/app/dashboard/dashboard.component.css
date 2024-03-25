@@ -1,17 +1,100 @@
-/* dashboard.component.css */
-.dashboard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Adjust based on your design preference */
-  }
-  
-  .user-info, .calendar-card {
-    width: 80%; /* Adjust based on your design preference */
-    max-width: 600px; /* Adjust based on your design preference */
-  }
-  
-  button {
-    margin: 5px;
-  }
-  
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #172B4D; /* Dark blue */
+  color: #FFFFFF; /* White text for contrast */
+  border: none;
+  border-radius: 8px; /* Rounded corners for the container */
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 2px solid #2C3E50; /* Slightly darker blue for separation */
+  background-color: #1B395C; /* A shade of blue slightly lighter than container for depth */
+}
+
+.dashboard-title {
+  font-weight: bold;
+  color:white; /* A bright color for the dashboard title to stand out */
+}
+
+.vacation-days {
+  font-size: 0.95rem;
+  color: white; /* Light grey for less emphasis */
+}
+
+.logout {
+  cursor: pointer;
+  text-decoration: none;
+  color: hsl(0, 0%, 96%); /* A bright color for an actionable item like logout */
+  font-size: 0.9rem;
+  border-radius: 15px;
+  padding: 5px 15px;
+}
+
+.logout:hover {
+  background-color: #304156; /* Darken the background on hover for logout */
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  flex-basis: 250px;
+  border-right: 2px solid #2C3E50;
+  padding: 20px;
+  background-color: #172B4D; /* Keeping the sidebar consistent with the container */
+}
+
+.main {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #172B4D; /* Same dark blue for consistency */
+}
+
+.action-buttons {
+  margin-bottom: 15px;
+}
+
+/* Button styling with Revalize color palette */
+button {
+  margin-right: 10px;
+  color: white;
+  background-color: #4C688B; /* Subdued blue for buttons */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px; /* Rounded buttons */
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #5D7D9A; /* Lighten the button background on hover */
+}
+
+/* Card styling with rounded corners */
+mat-card {
+  background-color: #1C4877; /* A slightly different blue for cards to distinguish them */
+  color: white;
+  border-radius: 8px; /* Rounded corners for cards */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for cards */
+}
+
+.mat-card-content {
+  padding: 20px;
+}
+
+/* Calendar card styling for consistency */
+.calendar-card {
+  flex-grow: 1;
+  /* Additional styles if needed */
+}
+
+.mat-card-title {
+  color: #FF9F1C; /* Bright color for card titles to pop out */
+}

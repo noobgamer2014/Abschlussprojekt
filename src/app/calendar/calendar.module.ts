@@ -7,7 +7,7 @@ import { FullCalendarModule } from '@fullcalendar/angular'; // Import FullCalend
   declarations: [CalendarComponent],
   imports: [
     CommonModule,
-    FullCalendarModule // Import FullCalendar module here
+    FullCalendarModule 
   ],
   exports: [CalendarComponent] // Export CalendarComponent to be used in other parts of the app
 })

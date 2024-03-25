@@ -1,0 +1,12 @@
+<div>
+    <input type="text" placeholder="Filter criteria" (input)="applyFilter($event)">
+  </div>
+  <div>
+    <ul>
+      <li *ngFor="let request of filteredRequests">
+        Start Date: {{ request.startDate | date }}, End Date: {{ request.endDate | date }}
+        <!-- Display other request details -->
+      </li>
+    </ul>
+  </div>
+  

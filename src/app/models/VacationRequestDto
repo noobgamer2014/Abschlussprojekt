@@ -1,0 +1,10 @@
+// vacation-request-dto.ts
+
+export interface VacationRequestDTO {
+  id?: number; // Optional for when creating a new request, as it might not have an ID yet
+  userId?: number; // Depending on whether you send this from the frontend or handle it in the backend
+  startDate: string; // Assuming dates are handled as strings, adjust if Date objects are used
+  endDate: string;
+  reason?: string; // Additional fields like 'reason' for the vacation request, optional
+  status?: string; // For viewing requests, to know their approval status, optional
+}

@@ -11,9 +11,9 @@ export class CalendarComponent {
 
   constructor() {
     this.calendarOptions = {
-      plugins: [dayGridPlugin], // Use the dayGridPlugin for the calendar
-      initialView: 'dayGridMonth', // Set initial view to day grid month
-      // Add other options as needed
+      plugins: [dayGridPlugin], 
+      initialView: 'dayGridMonth', 
+      
     };
   }
 }
