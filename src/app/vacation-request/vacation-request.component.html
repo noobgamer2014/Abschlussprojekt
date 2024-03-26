@@ -14,6 +14,15 @@
       <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
       <mat-datepicker #endDatePicker></mat-datepicker>
     </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Superior</mat-label>
+      <input matInput formControlName="superior">
+    </mat-form-field>
+
+    <!-- Display Calculated Vacation Days -->
+    <div>
+      <p>Vacation Days: {{calculateVacationDays()}}</p>
+    </div>
 
     <div class="actions">
       <button mat-button [mat-dialog-close]="false">Cancel</button>

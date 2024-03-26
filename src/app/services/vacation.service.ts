@@ -12,17 +12,17 @@ export class VacationService {
 
   submitVacationRequest(requestData: any) {
     // Replace the URL with your actual endpoint for creating vacation requests
-    return this.http.post<any>(`${environment.apiBaseUrl}/vacation/setvacation`, requestData);
+    return this.http.post<any>(`${environment.apiBaseUrl}/Vacation/requestVacation`, requestData);
   }
   getAllVacationRequests(): Observable<any[]> {
     return this.http.get<any[]>(`${environment.apiBaseUrl}/requests`);
   }
 
   getLeftoverDays(): Observable<any> {
-    return this.http.get<any>(`${environment.apiBaseUrl}/vacation/leftoverDays`);
+    return this.http.get<any>(`${environment.apiBaseUrl}/Vacation/leftoverDays`);
   }
 
   getRecentVacations(): Observable<any[]> { // Replace 'any' with the appropriate type
-    return this.http.get<any[]>(`${environment.apiBaseUrl}/vacation/recentVacations`);
+    return this.http.get<any[]>(`${environment.apiBaseUrl}/Vacation/recentVacations`);
   }
 }
